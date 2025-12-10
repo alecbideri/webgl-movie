@@ -6,19 +6,19 @@ export const Header: React.FC = () => {
   const { viewMode, toggleViewMode } = useStore();
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10 h-16 flex items-center justify-between px-8">
+    <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10 h-16 flex items-center justify-between px-4 md:px-8">
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg animate-pulse" />
-        <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-sans tracking-tighter">
+        <h1 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 font-sans tracking-tighter">
           KINETIC CINEMA
         </h1>
       </div>
 
       <button
         onClick={toggleViewMode}
-        className="flex items-center gap-3 px-4 py-2 rounded-full bg-surface hover:bg-white/10 transition-all border border-white/5 active:scale-95 group"
+        className="flex items-center gap-3 px-3 py-2 md:px-4 rounded-full bg-surface hover:bg-white/10 transition-all border border-white/5 active:scale-95 group"
       >
-        <span className="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
+        <span className="hidden sm:block text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
           {viewMode === 'GRID' ? 'Standard View' : 'WebGL Experience'}
         </span>
         <div className="relative w-12 h-6 bg-black/50 rounded-full p-1 transition-colors">
